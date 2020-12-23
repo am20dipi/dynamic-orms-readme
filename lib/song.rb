@@ -5,8 +5,10 @@ class Song
 
 
   def self.table_name
-    self.to_s.downcase.pluralize
-  end
+    self.to_s.downcase.pluralize #this returns the name of a table, given the name of a class
+  end #takes the name of the class, referenced with the self keyword
+  #to_s turns it into a string...
+
 
   def self.column_names
     DB[:conn].results_as_hash = true
